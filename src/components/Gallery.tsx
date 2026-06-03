@@ -66,6 +66,7 @@ export const Gallery: React.FC = () => {
               onClick={() => setSelectedImage(image)}
             >
               <img 
+                loading="lazy"
                 src={image.url} 
                 alt={image.alt} 
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
@@ -93,6 +94,7 @@ export const Gallery: React.FC = () => {
               <X size={24} />
             </button>
             <img 
+              loading="lazy"
               src={selectedImage.url} 
               alt={selectedImage.alt} 
               className="w-full h-auto max-h-[80vh] object-contain"
